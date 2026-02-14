@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+
+
+</head>
+<body>
+    <div class="All-forms" id="formSection">
+
+        <h1 class="heading">SMM Report</h1>
+
+        <h4 class="title">Page 1</h4>
+        <div class="form-page1">
+         <div class="input-col">
+            <div class="input-group" id="clientName">
+                <input type="text" id="name" placeholder="">
+                <label for="name">Client Name</label>               
+            </div>
+
+         </div>   
+         <div class="input-col">
+            <div class="input-grop">
+            <label for="dur">Duration</label>
+            <input type="text" id="duration" placeholder="eg: JAN 20 - JAN 26,2026">
+            </div>
+
+            <div class="input-group-logo">
+                <label for="log">Client Logo</label>
+                <input type="file" name="logo" id="logo">
+            </div>
+
+            <div class="month-part">
+            <label for="mon">Month</label>
+            <select name="days" id="Month">
+                <option value="JAN">January</option>
+                <option value="FEB">February</option>
+                <option value="MAR">March</option>
+                <option value="APR">April</option>
+                <option value="MAY">May</option>
+                <option value="JUN">June</option>
+                <option value="JUL">July</option>
+                <option value="AUG">August</option>
+                <option value="SEPT">September</option>
+                <option value="OCT">October</option>
+                <option value="NOV">November</option>
+                <option value="DEC">December</option>
+            </select>
+            </div>
+
+
+         </div>
+        </div>
+        <h4 class="title">Page2</h4>
+        <div class="form-page2">    
+            <div class="input-col">
+                <div class="input-group">
+                    <input type="text" id="reach" placeholder="">
+                    <label for="reach">Reach</label>
+                </div>
+
+                <div class="input-group">
+                    <input type="text" id="followers" placeholder="">
+                    <label for="follower">Followers</label>
+                </div>
+                
+            </div>
+
+            <div class="input-col">
+                <div class="input-group">
+                    <input type="text" id="content" placeholder="">
+                    <label for="content">Content</label>
+                </div>
+
+                <div class="input-group">
+                    <input type="text" id="profilevisit" placeholder="">
+                    <label for="profile">Profile-visit</label>
+                </div>
+
+                <div class="input-group">
+                    <input type="text" id="newfollower" placeholder="">
+                    <label for="new-follow">New-followers</label>
+                </div>
+            </div>
+        </div>
+ 
+        <h4 class="title">Page3</h4>
+        <div class="form-page3">
+
+        <div class="input-col">
+            <div class="input-group">
+                <input type="text" id="post" placeholder="">
+                <label for="post">Post</label>
+            </div>
+            <div class="input-group">
+
+            <input type="text" id="reel" placeholder="">  
+            <label for="reel">Reels</label>
+    
+            </div>
+        </div>
+
+
+        <div class="input-col">
+            <div class="input-group">
+            <input type="text" id="story" placeholder="">
+            <label for="story">Story</label>
+            </div>
+            <div class="input-group">
+            <input type="text" id="likes" placeholder="">
+            <label for="like">Likes</label>
+            </div>
+        </div>
+
+        <div class="input-col">
+            <div class="input-group">
+
+            <input type="text" id="comment" placeholder="">
+                <label for="comment">Comments</label>
+            </div>
+            <div class="input-group">
+            <input type="text" id="save" placeholder="">
+             <label for="save">Saves</label>
+            </div>
+
+            <div class="input-group">
+            <input type="text" id="share" placeholder="">
+            <label for="share">Shares</label>
+
+            </div>
+        </div>
+        </div>
+
+        <h4 class="title">Page 4</h4>
+        <div class="form-page4">
+            <div class="perf-imgs">
+            <label for="Perform">Performance Image1</label>
+            <input type="file" name="img1" id="perform-img1">
+            </div>
+
+            <div class="perf-imgs">
+            <label for="Perform">Performance Image2</label>
+            <input type="file" name="img2" id="perform-img2">                
+            </div>
+
+            <div class="perf-imgs">
+            <label for="Perform">Performance Image3</label>
+            <input type="file" name="img3" id="perform-img3">                
+            </div>
+
+        </div>
+
+        <h4 class="title">Page 5</h4>
+        <div class="form-page5">
+            <div class="last-imgs">
+                <label for="insight">Insight Image</label>
+                <input type="file" name="insight" id="insight">
+            </div>
+             <div class="last-imgs">
+                <label for="city">Cities Image</label>
+                <input type="file" id="city">
+            </div>
+
+        </div>
+
+        <div class="preview-btn">
+        <button id="preview">Preview</button>
+        </div>
+
+    </div>
+
+    <div class="preview-section" id="previewSection">
+        <div class="preview-part">
+        <div class="page1">
+            <h1 id="client-name"></h1>
+            <img src="" id="client-logo" alt="" width="100px" height="100px" >
+            <p id="client-duration"></p>
+        </div>       
+
+        <div class="page2">
+            <div id="client-reach"></div>
+            <div id="client-followers"></div>
+            <div id="client-content"></div>
+            <div id="client-profilevisit"></div>
+            <div id="client-newfollowers"></div>
+        </div>
+
+        <div class="page3">
+            <div id="client-post"></div>
+            <div id="client-reel"></div>
+            <div id="client-story"></div>
+            <div id="client-likes"></div>
+            <div id="client-comment"></div>
+            <div id="client-save"></div>
+            <div id="client-share"></div>
+        </div>
+
+        <div class="page4">
+            <img src="" id="client-perfImage1" width="100px" height="100px"></img>
+            <img src="" id="client-perfImage2" width="100px" height="100px"></img>
+            <img src="" id="client-perfImage3" width="100px" height="100px"></img>
+        </div>
+
+        <div class="page5">
+            <img src="" id="client-insight" width="100px" height="100px" ></img>
+            <img src="" id="client-city" width="100px" height="100px" ></img>
+        </div>
+
+        </div>
+        
+        <div class="btns">
+        <button id="back">Back</button>
+        <button id="btn">Submit</button>
+        </div>
+
+    </div>
+
+    <script src="main.js"></script>
+
+</body>
+</html>

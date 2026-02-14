@@ -1,0 +1,360 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+
+body{
+    display: flex;
+    justify-content: center;
+    padding: 20px 0px;
+  font-family: "Outfit", sans-serif;
+}
+.All-forms{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    width: 90%;
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.heading{
+    text-align: center;
+}
+
+.title{
+    font-size: 20px;
+    margin: 10px 0px;
+
+}
+
+    .page1{
+        width: 320px;
+        height: 500px;
+        background: url(smmui_page-0001.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        object-fit: contain;
+        }
+
+        .page2{
+            width: 320px;
+            height: 500px;
+            background: url(smmui_page-0001.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            object-fit: contain;
+        
+        }
+
+        .page3{
+            width: 320px;
+            height: 500px;
+            background: url(smmui_page-0001.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            object-fit: contain;
+        }
+
+        .page4{
+            width: 320px;
+            height: 500px;
+            background: url(smmui_page-0001.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            object-fit: contain;
+        
+        }
+
+        .page5{
+            width: 320px;
+            height: 500px;
+            background: url(smmui_page-0001.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            object-fit: contain;
+        
+        }
+
+        .page1{
+            position: relative;
+        }
+
+        .page1 h1{
+            position: absolute;
+            top: 230px;
+            left: 30px;
+        }
+
+        .preview-section {
+            display: none;
+            gap: 40px;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: center;
+
+        }
+
+       .preview-part {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px 10px;
+        }
+
+        #client-logo{
+            position: absolute;
+            top: 280px;
+            left: 30px;
+        }
+
+        #client-duration{
+            position: absolute;
+            top: 350px;
+            right: 10px;
+        }
+
+        .btns{
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+
+        .btns #back,.btns #btn{
+            padding: 15px 20px;
+        }
+
+
+    @media (max-width:600px){
+        .All-forms{
+            flex-wrap: wrap;
+        }
+        .flex1,.flex2{
+            display: flex;
+            gap: 10px;
+            flex-direction: column;
+            width: 95%;
+            padding: 50px 60px;
+
+        }
+    }
+
+
+    /* FormInput */
+
+/* .input-group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 10px;
+    font-size: 16px;
+    border: 1px solid gray;
+    border-radius: 6px;
+    outline: none;
+}
+
+.input-group label {
+    position: absolute;
+    left: 10px;
+    top: 12px;
+    background: white;
+    padding: 0 5px;
+    color: gray;
+    transition: 0.3s ease;
+    pointer-events: none;
+}
+
+.input-group input:focus + label,
+.input-group input:valid + label {
+    top: -8px;
+    font-size: 12px;
+    color: #5c5b5b;
+} */
+
+#clientName{
+    width: 100%;
+}
+
+
+.input-group{
+    position: relative;
+}
+
+.input-col div{
+    width: 50%;
+}
+
+.input-grop input{
+    width: 100%;
+        padding: 12px 10px;
+
+}
+
+.input-group input{
+    padding: 12px 10px;
+    width: 100%;
+}
+
+.input-group label{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    color: gray;
+}
+
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label {
+    position: absolute;
+    top: -8px;
+    font-size: 12px;
+    color: #5c5b5b;
+    background-color: white;
+} 
+
+input:focus{
+    outline-color:gray;
+}
+
+.form-page1,.form-page2,.form-page3{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+
+.input-col{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 10px;
+}
+
+.input-grop,.input-group-logo,.month-part{
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+
+.input-group-logo{
+    height: 100%;
+}
+
+input[type="file"]::file-selector-button{
+    height: 38px;
+    border-radius: 10px;
+    border: none;
+    border: 1px solid gray;
+}
+
+
+
+.perf-imgs{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.form-page4{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.form-page5{
+    display: flex;
+}
+
+.last-imgs{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.preview-btn{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.preview-btn #preview{
+    padding: 10px 20px;
+    background-color: rgb(74, 74, 206);
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.preview-btn #preview:hover{
+    background-color: rgb(114, 114, 238);
+}
+
+.month-part select{
+    padding: 12px 10px;
+}
+
+input[type="text"],select{
+    border-radius: 10px;
+    border: none;
+    border: 1px solid gray;
+}
+
+
+
+
+@media (max-width: 800px){
+
+    .form-page1,
+    .form-page2,
+    .form-page3 {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .input-col {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .input-col div {
+        width: 100%;
+    }
+
+    .input-group,
+    .input-grop {
+        width: 100%;
+    }
+
+    .form-page5{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.form-page4{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+}
+
+
+@media (max-width:450px){
+    #preview{
+        width: 100%;
+    }
+}
