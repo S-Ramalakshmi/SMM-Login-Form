@@ -1,5 +1,36 @@
 document.addEventListener("DOMContentLoaded", () => {
 
+
+const inputs = document.querySelectorAll(".image-input");
+
+inputs.forEach(function(input) {
+    input.addEventListener("change", function() {
+        const file = this.files[0];
+
+        if (file) {
+            const img = this.nextElementSibling; 
+            img.src = URL.createObjectURL(file);
+        }
+    });
+});
+
+const modal = document.getElementById("imageModal");
+const modalImg = document.getElementById("modalImg");
+const closeBtn = document.querySelector(".close");
+
+document.querySelectorAll(".img-part img").forEach(function(image) {
+    image.addEventListener("click", function() {
+        if (this.src) {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+        }
+    });
+});
+
+closeBtn.onclick = function() {
+    modal.style.display = "none";
+};
+
     const { jsPDF } = window.jspdf;
 
     const btn = document.getElementById("btn");
@@ -11,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
             // ===== GET VALUES =====
             const name = document.getElementById("name").value;
             const duration = document.getElementById("duration").value;
-
+            const month = document.getElementById("Month").value;
             const reach = document.getElementById('reach').value;
             const followers = document.getElementById('followers').value;
             const content = document.getElementById('content').value;
@@ -82,6 +113,7 @@ document.addEventListener("DOMContentLoaded", () => {
             doc.text(content, startX, startY + 40);
             doc.text(profile, startX, startY + 60);
             doc.text(newfollower, startX, startY + 80);
+            doc.text(month,30,280)
 
             // ================= PAGE 3 =================
             doc.addPage();
@@ -94,6 +126,7 @@ document.addEventListener("DOMContentLoaded", () => {
             doc.text(comment, startX, startY + 75);
             doc.text(save, startX, startY + 90);
             doc.text(share, startX, startY + 105);
+            doc.text(month,30,280)
 
             // ================= PAGE 4 =================
             doc.addPage();
@@ -109,6 +142,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 doc.addImage(perfBase64_3, "PNG", 140, 180, 40, 40);
             }
 
+            doc.text(month,30,280)
+
+
             // ================= PAGE 5 =================
             doc.addPage();
             doc.addImage("smmui_page-0001.jpg", "JPEG", 0, 0, pageWidth, pageHeight);
@@ -120,8 +156,14 @@ document.addEventListener("DOMContentLoaded", () => {
                 doc.addImage(cityBase64, "PNG", 80, 180, 40, 40);
             }
 
+            doc.text(month,30,280)
+
+
             // ===== SAVE PDF =====
-            doc.save("Feb Month Report.pdf");
+
+            const fileName = `${name} - ${month} Report.pdf`;
+
+            doc.save(fileName);
         };
     }
 });
