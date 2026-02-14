@@ -163,39 +163,6 @@ body{
     }
 
 
-    /* FormInput */
-
-/* .input-group {
-    position: relative;
-    margin-bottom: 25px;
-}
-
-.input-group input {
-    width: 100%;
-    padding: 12px 10px;
-    font-size: 16px;
-    border: 1px solid gray;
-    border-radius: 6px;
-    outline: none;
-}
-
-.input-group label {
-    position: absolute;
-    left: 10px;
-    top: 12px;
-    background: white;
-    padding: 0 5px;
-    color: gray;
-    transition: 0.3s ease;
-    pointer-events: none;
-}
-
-.input-group input:focus + label,
-.input-group input:valid + label {
-    top: -8px;
-    font-size: 12px;
-    color: #5c5b5b;
-} */
 
 #clientName{
     width: 100%;
@@ -280,7 +247,7 @@ input[type="file"]::file-selector-button{
 
 .img-part img{
     border: none;
-    
+
 }
 
 .perf-imgs{
@@ -376,10 +343,26 @@ input[type="text"],select{
 }
 
 
+@media(max-width:1050px){
+    .form-page4{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+}
+
+
 @media (max-width:450px){
     #preview{
         width: 100%;
     }
+
+        .img-part{
+            display: flex;
+            align-items: start;
+            flex-direction: column;
+            gap: 10px;
+        }
 }
 
 
